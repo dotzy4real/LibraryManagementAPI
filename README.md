@@ -9,11 +9,11 @@ To launch the application properly on a dev environment will require typically V
 
 
 ## 2. Project DB Set Up
-Before the application can run, the database needs to be set up first. There are primarily 2 database back up files on this location: `src\main\resources\DbBackup`. The back file `IdentityServerAuth.bak` is for the IdentityServer4 Authentication Mechanism (which is also an API), this is used to secure the API from public access. The second back up file is the actual application db `LibraryManagement.bak` which contains the data of the library (customers, books etc) that is being managed by the application. 
+Before the application can run, the database needs to be set up first. There are primarily 2 database back up files on this location: `src\main\resources\DbBackup`. The back up file `IdentityServerAuth.bak` is for the IdentityServer4 Authentication Mechanism (which is also an API), this is used to secure the API from public access. The second back up file is the actual application db `LibraryManagement.bak` which contains the data of the library (customers, books etc) that is being managed by the application. 
 
 
 ## 3. Project Start Up and Environment
-The Operating System will require .NET Core 8.0 installed on it for the application to run properly, if you plan to run the application on Visual Studio (2022 ideally) then multiple projects start up needs to be configured which are the IdentityServer application that secures and generates token for the API and the LibraryManagement.Api application which is the REST API that manages the library resources and other clients (front-end) needs to consume.
+The Operating System will require .NET Core 8.0 installed on it for the application to run properly, if you plan to run the application on Visual Studio (2022 ideally) then multiple projects start up needs to be configured which are the IdentityServer application that secures and generates token for the API and the LibraryManagement.Api application which is the REST API that manages the library resources and the API other clients (front-end) needs to consume.
 
 Alternatively, the projects (IdentityServer and LibrayManagement.Api) can be ran without using a visual studio IDE but by navigating to the runtime location of the project after building the release version of  both project. For the IdentityServer, the executable file of the application after release build will be on: `src\main\dotnet\IdentityServer\bin\Release\net8.0` Then execute `IdentityServer.exe` (this can be ran on any Operating System). Same goes for the LibraryManagement.Api, the location after release build is: `src\main\dotnet\LibraryManagement.Api\bin\Release\net8.0` Then execute `LibraryManagement.Api.exe`.
 
