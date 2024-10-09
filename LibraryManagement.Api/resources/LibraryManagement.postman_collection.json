@@ -1,0 +1,916 @@
+{
+	"info": {
+		"_postman_id": "19551739-9c62-43dc-ae86-607c9e9fb679",
+		"name": "LibraryManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Get All Books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MzQxOTMsImV4cCI6MTcyODQzNzc5MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMjA3MzNBMzBBNzJCOEUzM0FCQTgwNDg4QzMwQTY1MUQiLCJpYXQiOjE3Mjg0MzQxOTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.l2TYiNC9KskRcmxaXKdwzliozos-uyCeg_yTFPSKh85GDYjaoTujXrVeIBO-J8Ub6wCVOT-07DSg8vNqwA3tT_gssxFM7E4BwmJWRLF89JdCtogLw6OKhMfdcO7hn-siU30-PLb3VfG-KF4YIiGxTLJaLpYdGV1_d3dE3tI0TnqPKTMa1Hr-K0zfeWZ8O5FP3Ub-Hc5U9ZObyfxii7HAlTjZXtL4DyJTFV7fIN3yycsQMxdtERYxD5Hma3AgglmK1Ke693EhbnARxhVI4wQUiUP4S6KyCB9ZkU_1BzDMIUTwXc3ryNNAkojwG3418aaLI4C4Ksl331fnQsxMkkpvSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MjkxMzEsImV4cCI6MTcyODQzMjczMSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiODI5MjFEMjMxODdBMjYwRENCM0U2M0QzRjMxQzI5Q0UiLCJpYXQiOjE3Mjg0MjkxMzEsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.J3aGoDCnQGAIAArfjkqQgn4L1Hj4nBuIF38JvsJoboopdhAiiCGpv5KZzKIco9KNFgBBaLzPHhU23IyUqrDrxkphMytMSm1s9OtQj9Xak5ZtdSs0h2bAEixFpmPjeX6sD88AMx_2wQVpM6YnKdJiiCbxMCiFVkei7GxuaUVVd7_edSyxDICU-7vYA0N8Ptye357h7VK-JB3XMeHLrZUERjKdVDioN8VHCCAdWrd86m8I2XNEEnY3pUQpOrQqqkpc4T5YpljNqvYXZQWjw-TlsconUu9Vpeo8Nuzj-RA13_yTeWs6y_bn1zt1sjk_Twu_wCNB0x0ZP2dKSX6zUXVQ9Q",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Book/List",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Book",
+								"List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MzQxOTMsImV4cCI6MTcyODQzNzc5MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMjA3MzNBMzBBNzJCOEUzM0FCQTgwNDg4QzMwQTY1MUQiLCJpYXQiOjE3Mjg0MzQxOTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.l2TYiNC9KskRcmxaXKdwzliozos-uyCeg_yTFPSKh85GDYjaoTujXrVeIBO-J8Ub6wCVOT-07DSg8vNqwA3tT_gssxFM7E4BwmJWRLF89JdCtogLw6OKhMfdcO7hn-siU30-PLb3VfG-KF4YIiGxTLJaLpYdGV1_d3dE3tI0TnqPKTMa1Hr-K0zfeWZ8O5FP3Ub-Hc5U9ZObyfxii7HAlTjZXtL4DyJTFV7fIN3yycsQMxdtERYxD5Hma3AgglmK1Ke693EhbnARxhVI4wQUiUP4S6KyCB9ZkU_1BzDMIUTwXc3ryNNAkojwG3418aaLI4C4Ksl331fnQsxMkkpvSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"Origin Africa\",\r\n    \"author\": \"Jonathan Kingdon\",\r\n    \"description\": \"Origin Africa is a unique introduction to the natural history and evolution of the most misrepresented continent on Earth. Celebrated evolutionary biologist and artist\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Book/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Book",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MzQxOTMsImV4cCI6MTcyODQzNzc5MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMjA3MzNBMzBBNzJCOEUzM0FCQTgwNDg4QzMwQTY1MUQiLCJpYXQiOjE3Mjg0MzQxOTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.l2TYiNC9KskRcmxaXKdwzliozos-uyCeg_yTFPSKh85GDYjaoTujXrVeIBO-J8Ub6wCVOT-07DSg8vNqwA3tT_gssxFM7E4BwmJWRLF89JdCtogLw6OKhMfdcO7hn-siU30-PLb3VfG-KF4YIiGxTLJaLpYdGV1_d3dE3tI0TnqPKTMa1Hr-K0zfeWZ8O5FP3Ub-Hc5U9ZObyfxii7HAlTjZXtL4DyJTFV7fIN3yycsQMxdtERYxD5Hma3AgglmK1Ke693EhbnARxhVI4wQUiUP4S6KyCB9ZkU_1BzDMIUTwXc3ryNNAkojwG3418aaLI4C4Ksl331fnQsxMkkpvSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\": \"Jonathan Kingdon\",\r\n     \"description\": \"Origin Africa is a unique introduction to the natural history and evolution of the most misrepresented continent on Earth. Celebrated evolutionary biologist and artist\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Book/Edit/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Book",
+								"Edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MzQxOTMsImV4cCI6MTcyODQzNzc5MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMjA3MzNBMzBBNzJCOEUzM0FCQTgwNDg4QzMwQTY1MUQiLCJpYXQiOjE3Mjg0MzQxOTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.l2TYiNC9KskRcmxaXKdwzliozos-uyCeg_yTFPSKh85GDYjaoTujXrVeIBO-J8Ub6wCVOT-07DSg8vNqwA3tT_gssxFM7E4BwmJWRLF89JdCtogLw6OKhMfdcO7hn-siU30-PLb3VfG-KF4YIiGxTLJaLpYdGV1_d3dE3tI0TnqPKTMa1Hr-K0zfeWZ8O5FP3Ub-Hc5U9ZObyfxii7HAlTjZXtL4DyJTFV7fIN3yycsQMxdtERYxD5Hma3AgglmK1Ke693EhbnARxhVI4wQUiUP4S6KyCB9ZkU_1BzDMIUTwXc3ryNNAkojwG3418aaLI4C4Ksl331fnQsxMkkpvSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7189/api/Book/Details/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Book",
+								"Details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Book By Title",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MzQxOTMsImV4cCI6MTcyODQzNzc5MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMjA3MzNBMzBBNzJCOEUzM0FCQTgwNDg4QzMwQTY1MUQiLCJpYXQiOjE3Mjg0MzQxOTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.l2TYiNC9KskRcmxaXKdwzliozos-uyCeg_yTFPSKh85GDYjaoTujXrVeIBO-J8Ub6wCVOT-07DSg8vNqwA3tT_gssxFM7E4BwmJWRLF89JdCtogLw6OKhMfdcO7hn-siU30-PLb3VfG-KF4YIiGxTLJaLpYdGV1_d3dE3tI0TnqPKTMa1Hr-K0zfeWZ8O5FP3Ub-Hc5U9ZObyfxii7HAlTjZXtL4DyJTFV7fIN3yycsQMxdtERYxD5Hma3AgglmK1Ke693EhbnARxhVI4wQUiUP4S6KyCB9ZkU_1BzDMIUTwXc3ryNNAkojwG3418aaLI4C4Ksl331fnQsxMkkpvSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookTitle\" : \"Origin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Book/SearchByBookTitle",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Book",
+								"SearchByBookTitle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Book By Title",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MzQxOTMsImV4cCI6MTcyODQzNzc5MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMjA3MzNBMzBBNzJCOEUzM0FCQTgwNDg4QzMwQTY1MUQiLCJpYXQiOjE3Mjg0MzQxOTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.l2TYiNC9KskRcmxaXKdwzliozos-uyCeg_yTFPSKh85GDYjaoTujXrVeIBO-J8Ub6wCVOT-07DSg8vNqwA3tT_gssxFM7E4BwmJWRLF89JdCtogLw6OKhMfdcO7hn-siU30-PLb3VfG-KF4YIiGxTLJaLpYdGV1_d3dE3tI0TnqPKTMa1Hr-K0zfeWZ8O5FP3Ub-Hc5U9ZObyfxii7HAlTjZXtL4DyJTFV7fIN3yycsQMxdtERYxD5Hma3AgglmK1Ke693EhbnARxhVI4wQUiUP4S6KyCB9ZkU_1BzDMIUTwXc3ryNNAkojwG3418aaLI4C4Ksl331fnQsxMkkpvSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookTitle\" : \"Origin Africa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Book/FindByBookTitle",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Book",
+								"FindByBookTitle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book Reservations By BookId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NjEzMTMsImV4cCI6MTcyODQ2NDkxMywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiREY1ODM1MDYxRThCRjJDNDQxREFFNTQ1M0YyNzc3QzEiLCJpYXQiOjE3Mjg0NjEzMTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.YttB2b5rGfw7BxlZkI5ypc9zFxFgnUUd9q0678nAMBoFJR_gQzP0alkiMyJk6Fen-51XLdnscoC4l1UyWqfcv1QIU0T2H0AFNGumhPUDHksP0PxxPX5qcYVuu1BGnrVJQS-R2UieQVZxwy_qX8RMHiczF4Fg5Uq9nMvXIokn_TvhLosUVmeUytKTreneKHo38lvqHYJo-9G6NLvH2DSBAEnIbkQQjwT7D2mqXg7gRkyrGzxDoigXujaYhscvTuTfOkMfa3vlIYEcElXNl7MIjrXDIOF0XjJnJa8xpNuGtdS60DXaaxNBRCG8hW_s8Z5viqU-arNm2PimRfHOWmCY0Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7189/api/Book/GetAllBookReservationsByBookId/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Book",
+								"GetAllBookReservationsByBookId",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get All Customers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MzQxOTMsImV4cCI6MTcyODQzNzc5MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMjA3MzNBMzBBNzJCOEUzM0FCQTgwNDg4QzMwQTY1MUQiLCJpYXQiOjE3Mjg0MzQxOTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.l2TYiNC9KskRcmxaXKdwzliozos-uyCeg_yTFPSKh85GDYjaoTujXrVeIBO-J8Ub6wCVOT-07DSg8vNqwA3tT_gssxFM7E4BwmJWRLF89JdCtogLw6OKhMfdcO7hn-siU30-PLb3VfG-KF4YIiGxTLJaLpYdGV1_d3dE3tI0TnqPKTMa1Hr-K0zfeWZ8O5FP3Ub-Hc5U9ZObyfxii7HAlTjZXtL4DyJTFV7fIN3yycsQMxdtERYxD5Hma3AgglmK1Ke693EhbnARxhVI4wQUiUP4S6KyCB9ZkU_1BzDMIUTwXc3ryNNAkojwG3418aaLI4C4Ksl331fnQsxMkkpvSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Customer/List",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Customer",
+								"List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NzE0NTIsImV4cCI6MTcyODQ3NTA1MiwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiQThDQjExNENDMTI3OTZENjdEQkU3NDM5QzI4OEZDQ0YiLCJpYXQiOjE3Mjg0NzE0NTIsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.jFR2U0nI1jNQ1vwpiO81H-BifWfQj0GOj-NcS5jDrzlDCVnR6ETrAm4ZL3gSKydg1eVqtT-PRIjf3pBQkRKOYAG0e4eTmFJXja5TKOAG2yhm9NewLzFpMZqZbwfyqnIB_vKhc4OGp3dxZOVDQhGT-SpIqx_k0vrthybFDtStemAG4H17RMgUUKsuf40YIYIJl7Kj5kP-hXYaT1uQhIzDjkmWcet1PvJRdQx9SNIu_kOugO7TIsbIpASBnHOSjFvheNm0_s4BmeEuUQ_GAWF9_OuZr1oS7M6NRV40tD8nshU1MbNvNOh4lh9b80crZR-9QQB-q7u9mOdTYjaTstcexA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"Francis\",\r\n    \"LastName\": \"Williams\",\r\n    \"Email\": \"francis@yahoo.com\",\r\n    \"PhoneNumber\": \"070239238272\",\r\n    \"Address\": \"no. 4 Jamiu Street, Ogba, Ikeja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Customer/Create",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Customer",
+								"Create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0MzQxOTMsImV4cCI6MTcyODQzNzc5MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMjA3MzNBMzBBNzJCOEUzM0FCQTgwNDg4QzMwQTY1MUQiLCJpYXQiOjE3Mjg0MzQxOTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.l2TYiNC9KskRcmxaXKdwzliozos-uyCeg_yTFPSKh85GDYjaoTujXrVeIBO-J8Ub6wCVOT-07DSg8vNqwA3tT_gssxFM7E4BwmJWRLF89JdCtogLw6OKhMfdcO7hn-siU30-PLb3VfG-KF4YIiGxTLJaLpYdGV1_d3dE3tI0TnqPKTMa1Hr-K0zfeWZ8O5FP3Ub-Hc5U9ZObyfxii7HAlTjZXtL4DyJTFV7fIN3yycsQMxdtERYxD5Hma3AgglmK1Ke693EhbnARxhVI4wQUiUP4S6KyCB9ZkU_1BzDMIUTwXc3ryNNAkojwG3418aaLI4C4Ksl331fnQsxMkkpvSA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"First Name\" : \"Michael\",\r\n    \"Address\" : \"Umbrako\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Customer/Edit/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Customer",
+								"Edit",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NjEzMTMsImV4cCI6MTcyODQ2NDkxMywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiREY1ODM1MDYxRThCRjJDNDQxREFFNTQ1M0YyNzc3QzEiLCJpYXQiOjE3Mjg0NjEzMTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.YttB2b5rGfw7BxlZkI5ypc9zFxFgnUUd9q0678nAMBoFJR_gQzP0alkiMyJk6Fen-51XLdnscoC4l1UyWqfcv1QIU0T2H0AFNGumhPUDHksP0PxxPX5qcYVuu1BGnrVJQS-R2UieQVZxwy_qX8RMHiczF4Fg5Uq9nMvXIokn_TvhLosUVmeUytKTreneKHo38lvqHYJo-9G6NLvH2DSBAEnIbkQQjwT7D2mqXg7gRkyrGzxDoigXujaYhscvTuTfOkMfa3vlIYEcElXNl7MIjrXDIOF0XjJnJa8xpNuGtdS60DXaaxNBRCG8hW_s8Z5viqU-arNm2PimRfHOWmCY0Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Customer/Details/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Customer",
+								"Details",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book Reservations By Customer Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NjY5MDQsImV4cCI6MTcyODQ3MDUwNCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiNTcxQkY3RjNCMzZFQTk4NTc3NUM5QzBFQkQzMkJEMDEiLCJpYXQiOjE3Mjg0NjY5MDQsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.LdD5tbXanhYZAwhk6f6uTyOyrP0c1NrP5YTgq5o5ijytKLxRMx6d_f1Qd5bU5Lbiu_i-WyCwvBGL-lEVjxcCKLExzGSGF6-q29Z68M1ESzuUH9D0AIt_erVZP3dVTusITL-1ahrmc3buG7NzCnp10W_fa0Qjb805cmzjagulP_OOAmud_1wJA26MUiXjVwRLLTmeKEtn7C7EY2NPDRyYxKKfPed5HpQDPcPhmFPBKtOPeP19ewVwt6IxdoYhhSqHi9Xl_qjSwwXwDaKKRDwEOqMaONNRVb0w7QRBH2K6bYI5tvGdgeMoIKbJi1t5W0KlZZSCcH-p8YQBA3LBJULbPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Customer/GetAllBookReservationsByCustomerId/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Customer",
+								"GetAllBookReservationsByCustomerId",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Book Notifications By CustomerId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NjY5MDQsImV4cCI6MTcyODQ3MDUwNCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiNTcxQkY3RjNCMzZFQTk4NTc3NUM5QzBFQkQzMkJEMDEiLCJpYXQiOjE3Mjg0NjY5MDQsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.LdD5tbXanhYZAwhk6f6uTyOyrP0c1NrP5YTgq5o5ijytKLxRMx6d_f1Qd5bU5Lbiu_i-WyCwvBGL-lEVjxcCKLExzGSGF6-q29Z68M1ESzuUH9D0AIt_erVZP3dVTusITL-1ahrmc3buG7NzCnp10W_fa0Qjb805cmzjagulP_OOAmud_1wJA26MUiXjVwRLLTmeKEtn7C7EY2NPDRyYxKKfPed5HpQDPcPhmFPBKtOPeP19ewVwt6IxdoYhhSqHi9Xl_qjSwwXwDaKKRDwEOqMaONNRVb0w7QRBH2K6bYI5tvGdgeMoIKbJi1t5W0KlZZSCcH-p8YQBA3LBJULbPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Customer/GetAllBookNotificationsByCustomerId/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Customer",
+								"GetAllBookNotificationsByCustomerId",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Customer By Name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NDAxNjQsImV4cCI6MTcyODQ0Mzc2NCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiOEFFOTI4RjZENkQxRjZBMTE4QzMyRDY2MTE4NkNBNEYiLCJpYXQiOjE3Mjg0NDAxNjQsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.wYaBEOdSheWzsaEeJmuVui7aETuVik9T5XjY8G39AZT3dfGnLFTlqb-50TUtDkTII6aEowSkhVwjEZZTxRIO7Zg8VbbvUS9_siC6eMBneImWkAguyvw7_ePH5Pd2M4c_9kntJKYeZJJmSVS0jn8JZJ9f-bK4KOMHakBp8w3sLmkQt5nd2jsMCn3ug_cEwRNrG3JDFOKdg88D6Dh4aIedOn_rx4lS3nmyOm8ZZ4swufgjwSRjaco471u2uzZeb9buTVeQUAXUUin3s-cnulHRQXVNzLN5Ejf7IZSsmGJFlhoLuEfsvOvIk82-8-MXnNz_hNGS1qIl7FDL1U2rD4q1eg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\" : \"ayoba\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/Customer/SearchCustomer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"Customer",
+								"SearchCustomer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book Reservation",
+			"item": [
+				{
+					"name": "Get All Book Reservations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NDc4NTAsImV4cCI6MTcyODQ1MTQ1MCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMEZENTIyRkQ3RjVDODgyNjMwNjA3M0RDRjgxQUMyNEYiLCJpYXQiOjE3Mjg0NDc4NTAsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.L2RD-Fmg8wk-gj4DIM_csAPucBnb1XXzZJTCfh_TG_TgVIUjNsFKy2NzctzIzZJvA0GopDC9fETF7ykv5ZSfD9sodqC9XQ3Ouoj2sXv2jK6okjj-BqKlPuyppwQcIHKDPfp6G6fDy4Unist6o-vMyyQ_Vh4mi8SXy8oj6oH7BkX_-bYCjOFMJPDfNFk5PsVOYSwS7TanfKCdaOiIJxoJm3OKzOh6k56BayxM6_0XjpTSguMz4NS5mKNQNp1f25VfCGmEl-elP8s82iS2-f8BpbRlRkXE08t8fGuvgFgm_m3ZWz1_PJL0FDtc8mD3uG8iQ1RmZiVMaw1rHQtI8G1gZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/BookReservation/List",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"BookReservation",
+								"List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reserve Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NTIxMjcsImV4cCI6MTcyODQ1NTcyNywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMzQxMTcwOEQ5Qjg0OUU2NTJDQTM5NzE1Njg0M0QxNzAiLCJpYXQiOjE3Mjg0NTIxMjcsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.W5rWbLazqChWIVUWQC5ojcOao9d6OQtQGYsoJSlEgnsvvNxIw9TKliIt6qYEVYeqLCn7mzb8stCXrNMw1_6UCMZauzMf_XFsrzItzIxeiwvZrCW2dUQw0RDVcubmIPkhzWykoPrfifR4n8TbMOI5wJgrn5D_rFEPy9-O2gM8Ttt1NMzf1NxLIGjLOD19lxI1iQs0c4P8cIsUYY8MurqqTyGxiyBsp7Py_Un8dKulVYfU9FGOqzAmCcwpFOck_f0GwUZFYE_KoEYZye6Dz4YP8SkuIu5-sWSWgQBkgFujTYzRZP2pqffceUkjkaEkxncIeZsnbfMPBMPgOW_tyDKfQg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"BookId\" : 3,\r\n    \"CustomerId\": 3,\r\n    \"RequestAvailabilityNotification\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/BookReservation/ReserveBook",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"BookReservation",
+								"ReserveBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrow Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NTIxMjcsImV4cCI6MTcyODQ1NTcyNywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMzQxMTcwOEQ5Qjg0OUU2NTJDQTM5NzE1Njg0M0QxNzAiLCJpYXQiOjE3Mjg0NTIxMjcsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.W5rWbLazqChWIVUWQC5ojcOao9d6OQtQGYsoJSlEgnsvvNxIw9TKliIt6qYEVYeqLCn7mzb8stCXrNMw1_6UCMZauzMf_XFsrzItzIxeiwvZrCW2dUQw0RDVcubmIPkhzWykoPrfifR4n8TbMOI5wJgrn5D_rFEPy9-O2gM8Ttt1NMzf1NxLIGjLOD19lxI1iQs0c4P8cIsUYY8MurqqTyGxiyBsp7Py_Un8dKulVYfU9FGOqzAmCcwpFOck_f0GwUZFYE_KoEYZye6Dz4YP8SkuIu5-sWSWgQBkgFujTYzRZP2pqffceUkjkaEkxncIeZsnbfMPBMPgOW_tyDKfQg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"StartDate\" : \"2024-10-09T07:30:05\",\r\n    \"EndDate\": \"2024-10-10T09:30:05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/BookReservation/BorrowBook/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"BookReservation",
+								"BorrowBook",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NTY1MjgsImV4cCI6MTcyODQ2MDEyOCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiRTU4RDA3Rjg5OTMyQkJERTRGNjI1REEzQkU5MERBQTciLCJpYXQiOjE3Mjg0NTY1MjgsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.WIf7bpzPV1HrcMBY4aRNbeynPZcV0TxLbnGTUHuz21aq7UKQBbyAwamDFXY4BwK02z0jIZRX-yY2_SJ7hxQV-DcclfVV_LOOh8kjdG5jER8GBxZT9yRIToUEqntn23ROiYl4LMmoVZXZgfeGSvAejhj84D0KwkaD3p6Ox4SZ-6ckn5nMTJKCK55Jh3uPjSwraMnd4j15kcOUxA1RDKNGa-ht1dWcr1KPYtyVbW6qatUnRcKf8LxjdBvP74z9QYabTQJT-6O8RWWkdFRMIFJop_kQcOUmnlvhrp6hhlQTaQYfAHnCrM3f_2fKQaEW7mK8DlPzr3YnwKtGGQIdlpu6wA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"BookId\": 1,\"CustomerId\" : 2}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/BookReservation/ReturnBook",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"BookReservation",
+								"ReturnBook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book Reservation By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NjEzMTMsImV4cCI6MTcyODQ2NDkxMywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiREY1ODM1MDYxRThCRjJDNDQxREFFNTQ1M0YyNzc3QzEiLCJpYXQiOjE3Mjg0NjEzMTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.YttB2b5rGfw7BxlZkI5ypc9zFxFgnUUd9q0678nAMBoFJR_gQzP0alkiMyJk6Fen-51XLdnscoC4l1UyWqfcv1QIU0T2H0AFNGumhPUDHksP0PxxPX5qcYVuu1BGnrVJQS-R2UieQVZxwy_qX8RMHiczF4Fg5Uq9nMvXIokn_TvhLosUVmeUytKTreneKHo38lvqHYJo-9G6NLvH2DSBAEnIbkQQjwT7D2mqXg7gRkyrGzxDoigXujaYhscvTuTfOkMfa3vlIYEcElXNl7MIjrXDIOF0XjJnJa8xpNuGtdS60DXaaxNBRCG8hW_s8Z5viqU-arNm2PimRfHOWmCY0Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7189/api/BookReservation/Details/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"BookReservation",
+								"Details",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Available Book Notification",
+			"item": [
+				{
+					"name": "Get All Book Notifications",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NDc4NTAsImV4cCI6MTcyODQ1MTQ1MCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiMEZENTIyRkQ3RjVDODgyNjMwNjA3M0RDRjgxQUMyNEYiLCJpYXQiOjE3Mjg0NDc4NTAsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.L2RD-Fmg8wk-gj4DIM_csAPucBnb1XXzZJTCfh_TG_TgVIUjNsFKy2NzctzIzZJvA0GopDC9fETF7ykv5ZSfD9sodqC9XQ3Ouoj2sXv2jK6okjj-BqKlPuyppwQcIHKDPfp6G6fDy4Unist6o-vMyyQ_Vh4mi8SXy8oj6oH7BkX_-bYCjOFMJPDfNFk5PsVOYSwS7TanfKCdaOiIJxoJm3OKzOh6k56BayxM6_0XjpTSguMz4NS5mKNQNp1f25VfCGmEl-elP8s82iS2-f8BpbRlRkXE08t8fGuvgFgm_m3ZWz1_PJL0FDtc8mD3uG8iQ1RmZiVMaw1rHQtI8G1gZQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7189/api/AvailableBookNotification/List",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"AvailableBookNotification",
+								"List"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Available Notification By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjREMDNBNzkxRTE3NjhEQjEwNTAzOTJEM0FGNTVGMDExIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE3Mjg0NjEzMTMsImV4cCI6MTcyODQ2NDkxMywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE4MiIsImF1ZCI6ImxpYnJhcnlfYXBpX2NsaWVudCIsImNsaWVudF9pZCI6ImxpYnJhcnlfYXBwIiwianRpIjoiREY1ODM1MDYxRThCRjJDNDQxREFFNTQ1M0YyNzc3QzEiLCJpYXQiOjE3Mjg0NjEzMTMsInNjb3BlIjpbImxpYnJhcnlfYXBpIl19.YttB2b5rGfw7BxlZkI5ypc9zFxFgnUUd9q0678nAMBoFJR_gQzP0alkiMyJk6Fen-51XLdnscoC4l1UyWqfcv1QIU0T2H0AFNGumhPUDHksP0PxxPX5qcYVuu1BGnrVJQS-R2UieQVZxwy_qX8RMHiczF4Fg5Uq9nMvXIokn_TvhLosUVmeUytKTreneKHo38lvqHYJo-9G6NLvH2DSBAEnIbkQQjwT7D2mqXg7gRkyrGzxDoigXujaYhscvTuTfOkMfa3vlIYEcElXNl7MIjrXDIOF0XjJnJa8xpNuGtdS60DXaaxNBRCG8hW_s8Z5viqU-arNm2PimRfHOWmCY0Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7189/api/AvailableBookNotification/Details/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7189",
+							"path": [
+								"api",
+								"AvailableBookNotification",
+								"Details",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Library API Token Generation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "library_app",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "console_app_secret",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "library_api",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "https://localhost:7182/connect/token",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Pass123",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:7182/connect/token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7182",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

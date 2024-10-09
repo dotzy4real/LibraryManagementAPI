@@ -21,4 +21,8 @@
     <ProjectReference Include="..\LibraryManagement.Services\LibraryManagement.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="resources\" />
+  </ItemGroup>
+
 </Project>
